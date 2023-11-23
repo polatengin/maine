@@ -4,3 +4,6 @@ Content Security Policy (CSP) is an added layer of security that helps to detect
 
 CSP is designed to be fully backward compatible, so you can deploy it without breaking your existing application.
 
+## How to enable CSP on a Next.js app
+
+Generate a `nonce` and add it to the CSP header. The `nonce` is a random string that is generated for each request. It is used to ensure that the content of the script tag is not modified by an attacker.
