@@ -41,4 +41,13 @@ const response = NextResponse.next({ request: { headers } });
 // ./pages/page.tsx
 const nonce = headers().get('x-nonce');
 ```
+
+When adding a script tag to a page, add the `nonce` value to the `nonce` attribute.
+
+```html
+<Script
+  src="https://www.googletagmanager.com/gtag/js"
+  strategy="afterInteractive"
+  nonce={nonce}
+/>
 ```
