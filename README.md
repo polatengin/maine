@@ -34,3 +34,11 @@ headers.set('Content-Security-Policy', contentSecurityPolicyHeaderValue);
 
 const response = NextResponse.next({ request: { headers } });
 ```
+
+`nonce` value can be read in pages by reading the `x-nonce` header.
+
+```typescript
+// ./pages/page.tsx
+const nonce = headers().get('x-nonce');
+```
+```
