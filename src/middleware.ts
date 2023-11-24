@@ -24,6 +24,7 @@ export function middleware(request: NextRequest) {
   headers.set('Content-Security-Policy', contentSecurityPolicyHeaderValue);
 
   const response = NextResponse.next({ request: { headers } });
+  response.headers.set('Content-Security-Policy', contentSecurityPolicyHeaderValue);
 
   return response;
 }
